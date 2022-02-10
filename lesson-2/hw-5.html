@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+        function sum (num1, num2){
+            let result = num1 + num2;
+            return result;
+        }
+
+        function subtr (num1, num2){
+            let result = num1 - num2;
+            return result;
+        }
+
+        function div (num1, num2){
+            let result = num1 / num2;
+            return result;
+        }
+
+        function multipl (num1, num2){
+            let result = num1 * num2;
+            return result;
+        }
+
+        let resultOperation = null;
+
+        function mathOperation(arg1, arg2, operation){
+            switch (operation){
+                case "сложение":
+                    resultOperation = sum(arg1, arg2);
+                    return resultOperation;
+                case "вычитание":
+                    resultOperation = subtr(arg1, arg2);
+                    return resultOperation;
+                case "деление":
+                    resultOperation = div(arg1, arg2);
+                    return resultOperation;
+                case "умножение":
+                    resultOperation = multipl(arg1, arg2);
+                    return resultOperation;
+                default:
+                    console.log('Вы указали несуществующую операцию');
+            }
+        }
+
+        console.log(mathOperation(5, 10, 'сложение'));
+        console.log(mathOperation(5, 10, 'вычитание'));
+        console.log(mathOperation(5, 10, 'деление'));
+        console.log(mathOperation(5, 10, 'умножение'));
+        console.log(mathOperation(5, 10, 'возведение в степень'));
+
+    </script>
+</body>
+</html>

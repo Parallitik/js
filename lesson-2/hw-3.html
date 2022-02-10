@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    'use strict'
+
+    let num1 = +prompt('Задайте любое число');
+    let num2 = +prompt('Задайте любое число');
+    
+    // функия поиска максимального числа
+    function getMaxNum (a, b) {
+        if (a >= b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+
+    // функция поиска минимального числа
+    function getMinNum (a, b) {
+        if (a <= b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+
+    let MaxNum = getMaxNum(num1, num2);
+    let MinNum = getMinNum(num1, num2);
+
+    if (MaxNum >= 0 && MinNum >= 0) {
+        console.log(MaxNum - MinNum);
+    } else if (MinNum < 0 && MaxNum >= 0) {
+        console.log(MaxNum + MinNum);
+    } else {
+        console.log(MaxNum * MinNum);
+    }
+
+    </script>
+</body>
+</html>
