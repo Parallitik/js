@@ -39,6 +39,8 @@ const productsSortPrice = products.sort(function(product1, product2) {
     }
     if ((product1.price < product2.price)) {
         return -1;
+    } else {
+        return 0;
     }
 })
 
